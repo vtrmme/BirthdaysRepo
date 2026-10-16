@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1120">
+  <meta name="description" content="Cumpleaños de amigos y álbum de recuerdos fotográficos.">
+  <title>Cumples &amp; Recuerdos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fondo ambiental decorativo -->
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__orb ambient__orb--a"></span>
+    <span class="ambient__orb ambient__orb--b"></span>
+  </div>
+
+  <header class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Álbum personal</p>
+      <h1 class="hero__title">Cumples <span class="text-gradient">&amp; Recuerdos</span></h1>
+      <p class="hero__subtitle">Las personas que importan, las fechas que no se olvidan y las fotos que cuentan la historia.</p>
+
+      <!-- Próximo cumpleaños (se rellena desde script.js) -->
+      <aside class="next" id="next" hidden aria-live="polite">
+        <span class="next__pulse" aria-hidden="true"></span>
+        <p class="next__text" id="next-text"></p>
+      </aside>
+
+      <div class="toolbar">
+        <label class="search" for="search">
+          <svg class="search__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="m20 20-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="search" class="search__input" type="search" placeholder="Buscar amigo…" autocomplete="off">
+        </label>
+        <p class="stats" id="stats" aria-live="polite"></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="contenido">
+    <p class="state" id="estado" role="status" hidden></p>
+    <ul class="grid" id="grid" aria-label="Lista de amigos"></ul>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Hecho con cariño · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- Modal de detalle -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+
+    <article class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="icon-btn modal__close" type="button" data-close aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="modal__media">
+        <img class="modal__img" id="modal-img" alt="">
+        <button class="icon-btn modal__nav modal__nav--prev" id="modal-prev" type="button" aria-label="Recuerdo anterior">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn modal__nav modal__nav--next" id="modal-next" type="button" aria-label="Recuerdo siguiente">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <span class="modal__counter" id="modal-counter"></span>
+      </div>
+
+      <div class="modal__body">
+        <p class="modal__eyebrow" id="modal-birthday"></p>
+        <h2 class="modal__title" id="modal-title"></h2>
+
+        <div class="modal__memory" id="modal-memory">
+          <dl class="meta">
+            <div class="meta__item">
+              <dt>Lugar</dt>
+              <dd id="modal-lugar"></dd>
+            </div>
+            <div class="meta__item">
+              <dt>Cuándo</dt>
+              <dd id="modal-fecha"></dd>
+            </div>
+          </dl>
+          <p class="modal__desc" id="modal-desc"></p>
+        </div>
+
+        <div class="dots" id="modal-dots" role="tablist" aria-label="Recuerdos"></div>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

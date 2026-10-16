@@ -1,0 +1,3 @@
+Coloca aquí las fotografías de los recuerdos (jpg, png, webp).
+Las rutas en datos.json deben coincidir, por ejemplo: "fotos/lucia_alhambra.jpg".
+Consejo: reduce las imágenes a ~1600 px de ancho para que la web cargue rápido.
