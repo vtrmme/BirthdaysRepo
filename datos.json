@@ -3,6 +3,13 @@
     "id": "fran-alcantud",
     "nombre": "Fran Alcantud",
     "fechaCumple": "06/10",
-    "recuerdos": []
+    "recuerdos": [
+      {
+        "foto": "fotos/fran_1.jpg",
+        "lugar": "Viaje en autobús",
+        "fechaFoto": "",
+        "descripcion": ""
+      }
+    ]
   }
 ]
