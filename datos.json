@@ -30,5 +30,11 @@
         "descripcion": "Primer día de esquí de la temporada."
       }
     ]
+  },
+  {
+    "id": "fran-alcantud",
+    "nombre": "Fran Alcantud",
+    "fechaCumple": "06/10",
+    "recuerdos": []
   }
 ]
