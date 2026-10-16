@@ -1,37 +1,5 @@
 [
   {
-    "id": "lucia-fernandez",
-    "nombre": "Lucía Fernández",
-    "fechaCumple": "23/10",
-    "recuerdos": [
-      {
-        "foto": "fotos/lucia_alhambra.jpg",
-        "lugar": "La Alhambra, Granada",
-        "fechaFoto": "Primavera 2021",
-        "descripcion": "Tarde de paseo entre jardines y miradores, con helado incluido."
-      },
-      {
-        "foto": "fotos/lucia_cabo_de_gata.jpg",
-        "lugar": "Cabo de Gata, Almería",
-        "fechaFoto": "Verano 2024",
-        "descripcion": "Escapada de fin de semana, calas y atardecer en la playa."
-      }
-    ]
-  },
-  {
-    "id": "carlos-romero",
-    "nombre": "Carlos Romero",
-    "fechaCumple": "14/03",
-    "recuerdos": [
-      {
-        "foto": "fotos/carlos_sierra_nevada.jpg",
-        "lugar": "Sierra Nevada",
-        "fechaFoto": "Invierno 2023",
-        "descripcion": "Primer día de esquí de la temporada."
-      }
-    ]
-  },
-  {
     "id": "fran-alcantud",
     "nombre": "Fran Alcantud",
     "fechaCumple": "06/10",
